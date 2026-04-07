@@ -37,7 +37,7 @@ def signUp(users):
 
 # function logIn
 def logIn(users):
-    userName = input("User Name: ").strip()
+    userName = input("User Name: ").strip().lower()
     password = input("Password: ").strip()
 
     tries = 3
