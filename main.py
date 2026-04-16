@@ -1,5 +1,5 @@
 import os
-
+import datetime
 # function Clear Screen
 def clearScreen():
     os.system("cls") if os.name == "nt" else os.system("clear")
@@ -82,8 +82,10 @@ def addTask(tasks):
     newTask = input("Write The New Task: ").strip()
     if newTask == "":
         print("Sorry, I Need To Write Something important.")
+        return
     else:
-        tasks.append(newTask)
+        time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M")
+        tasks.append(f"{newTask} ({time})\n")
         print(f"\nYou Have {len(tasks)} Task(s).")
 
 # function Tasks Viewing
