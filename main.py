@@ -104,11 +104,7 @@ def tasksViewing(tasks):
 # function Edit Task
 def editTask(tasks, fileNameTasks):
 
-    if not tasks: 
-        print("=>❌No tasks yet <=") 
-        return
-    for i, task in enumerate(tasks, start = 1): 
-        print(f"{i}- {task}")
+    tasksViewing(tasks)
 
     try:
         taskNumber = int(input("Write The Task Number: ").strip())
@@ -125,11 +121,7 @@ def editTask(tasks, fileNameTasks):
 # function Delete Task
 def deleteTask(tasks, fileNameTasks):
 
-    if not tasks: 
-        print("=>❌No tasks yet <=") 
-        return
-    for i, task in enumerate(tasks, start = 1): 
-        print(f"{i}- {task}")
+    tasksViewing(tasks)
     try:
         deleteTaskNumber = int(input("Enter the task number you want to delete: ").strip())
 
